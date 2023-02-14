@@ -83,8 +83,11 @@ public class Main {
         short   weightToLoose = 7,
                 minWeightToLoose = 250,
                 maxWeightToLoose = 500;
-        System.out.println("Дней понадобится, чтобы потерять " + weightToLoose + " кг, теряя по " + minWeightToLoose + "г в день: " + weightToLoose * 1000 / minWeightToLoose);
-        System.out.println("Дней понадобится, чтобы потерять " + weightToLoose + " кг, теряя по " + maxWeightToLoose + "г в день: " + weightToLoose * 1000 / maxWeightToLoose);
+        float   daysMinWeightToLoose = (float) (weightToLoose * 1000 / minWeightToLoose),
+                daysMaxWeightToLoose = (float) (weightToLoose * 1000 / maxWeightToLoose);
+        System.out.println("Дней понадобится, чтобы потерять " + weightToLoose + " кг, теряя по " + minWeightToLoose + "г в день: " + daysMinWeightToLoose);
+        System.out.println("Дней понадобится, чтобы потерять " + weightToLoose + " кг, теряя по " + maxWeightToLoose + "г в день: " + daysMaxWeightToLoose);
+        System.out.println("Дней понадобится в среднем, чтобы потерять " + weightToLoose + " кг: " + (daysMaxWeightToLoose + daysMinWeightToLoose) / 2);
         space();
 
     }
